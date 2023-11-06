@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/css/start_quiz.css' %}">
+    <title>Головна</title>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        <h1>Ласкаво просимо до навчального тесту по правилах дорожнього руху!</h1>
+        <p>Натисніть кнопку, щоб розпочати.</p>
+        <div class="block">
+            <div class="traffic-light">
+                <div class="light red">
+                    <a href="/" class="home-button">Головна</a>
+                </div>
+                <div class="light yellow"></div>
+                <div class="light green">
+                    <form method="post" action="{% url 'answer_question' question.id %}">
+                        {% csrf_token %}
+                        <button class="animated-button" type="submit">Почати</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+    <div class='advertising'></div>
+</body>
+</html>

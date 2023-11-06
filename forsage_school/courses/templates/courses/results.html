@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/css/resultats.css' %}">
+    <title>Результати тесту</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class='block_menu'>
+    <h1>Результати:</h1>
+    <p>Ви набрали {{score}} балів.</p>
+    <p>Вітаємо із завершенням тесту!</p>
+
+    <h2>Відповіді:</h2>
+    </div>
+    <div class='block_result'>
+        {% for question in questions %}
+        <div class="question">
+            <img src="{{ question.image }}" alt="{{ question.text }}">
+            <p>{{ question.text }}</p>
+            <ul>
+                <li{% if question.correct_option == 1 %} style="color: #00c66a;"{% endif %}>{{ question.option1 }}</li>
+                <li{% if question.correct_option == 2 %} style="color: #00c66a;"{% endif %}>{{ question.option2 }}</li>
+                <li{% if question.correct_option == 3 %} style="color: #00c66a;"{% endif %}>{{ question.option3 }}</li>
+            </ul>
+        </div>
+            {% endfor %}
+                <a href="{% url 'reset_quiz' %}">Скинути результати та почати заново</a>
+            {% endblock %}
+    </div>
+</body>
+
+</html>
