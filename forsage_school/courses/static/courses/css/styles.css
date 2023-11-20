@@ -9,7 +9,10 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 79c4817e39626633e9d58ce9a1eb13dec6e8c871
 .block_start{
     background: rgba(237, 236, 236, 0.757);
     border: 0.1rem solid black;
@@ -28,10 +31,17 @@ h1 {
     display: inline-block;}
     h1 {
         font-size: 36px;
+<<<<<<< HEAD
         color: #333; 
         text-transform: uppercase;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
         animation: shadowAnimation 2s alternate infinite; 
+=======
+        color: #333; /* Цвет текста */
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Тень текста */
+        animation: shadowAnimation 2s alternate infinite; /* Анимация тени */
+>>>>>>> 79c4817e39626633e9d58ce9a1eb13dec6e8c871
     }
     
     @keyframes shadowAnimation {
@@ -39,7 +49,11 @@ h1 {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
         100% {
+<<<<<<< HEAD
             text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+=======
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Измененная тень */
+>>>>>>> 79c4817e39626633e9d58ce9a1eb13dec6e8c871
         }}
 
 h3{
@@ -55,6 +69,10 @@ h3{
 }
 
 
+<<<<<<< HEAD
+=======
+/* Стилизуем ссылки (если есть) */
+>>>>>>> 79c4817e39626633e9d58ce9a1eb13dec6e8c871
 a {
     color: #007acc;
     text-decoration: none;
@@ -79,6 +97,7 @@ a:hover {
 
 
 .contact {
+<<<<<<< HEAD
     background-color: #f4f4f4; 
     padding: 40px; 
     text-align: center; 
@@ -102,6 +121,31 @@ a:hover {
 
 .contact a:hover {
     text-decoration: underline;
+=======
+    background-color: #f4f4f4; /* Цвет фона */
+    padding: 40px; /* Отступы вокруг содержимого */
+    text-align: center; /* Выравнивание текста по центру */
+    font-size: 18px; /* Размер шрифта */
+}
+
+.contact h2 {
+    color: #333; /* Цвет заголовка */
+    font-size: 24px; /* Размер заголовка */
+}
+
+.contact p {
+    margin: 10px 0; /* Верхний и нижний отступ между абзацами */
+}
+
+.contact a {
+    color: #007acc; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    font-weight: bold; /* Жирный шрифт для ссылок */
+}
+
+.contact a:hover {
+    text-decoration: underline; /* Подчеркивание ссылок при наведении */
+>>>>>>> 79c4817e39626633e9d58ce9a1eb13dec6e8c871
 }
 
 

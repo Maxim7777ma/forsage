@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+<<<<<<< HEAD
 from courses import views  
 
 
@@ -23,4 +24,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.about, name='about'), 
     path('course_list/', views.course_list, name='course_list'), 
+=======
+from courses import views  # Импортируем views из вашего приложения
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.about, name='about'),  # Маршрут для страницы about как корневой
+    path('course_list/', views.course_list, name='course_list'),  # Маршрут для страницы курсов
+>>>>>>> 79c4817e39626633e9d58ce9a1eb13dec6e8c871
 ]
